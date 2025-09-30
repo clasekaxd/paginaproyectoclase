@@ -1,17 +1,9 @@
 /* FUENTES Y VARIABLES DE COLOR */
-:root, [data-bs-theme="light"] {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --section-bg-light: #f8f9fa;
-    --heading-font: 'Montserrat', sans-serif;
-    --body-font: 'Roboto', sans-serif;
-    --bs-body-color: #34495e;
-}
-
-[data-bs-theme="dark"] {
-    --primary-color: #49a7e9;
-    --section-bg-light: #2c3e50;
-    --bs-body-color: #ecf0f1;
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --text-color: #333;
+    --light-bg: #f5f6fa;
 }
 
 body {
@@ -69,6 +61,10 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .display-3 {
     border-color: #465b70;
 }
 
+.text-warning {
+    color: #ffc107 !important;
+}
+
 .card {
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -123,4 +119,18 @@ main {
 
 .form-switch .form-check-input {
     cursor: pointer;
+}
+
+/* Estilos para el foco en los formularios */
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(var(--primary-color), 0.25);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* Estilos para el foco en los formularios */
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(var(--primary-color), 0.25);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
