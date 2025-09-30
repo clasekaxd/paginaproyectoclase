@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Modo claro/oscuro con icono
+    const themeBtn = document.getElementById('toggle-theme');
+    const body = document.body;
+    let isLight = false;
+    if (themeBtn) {
+        // Iconos Unicode: ☀️ (sol), 🌙 (luna)
+        themeBtn.textContent = '☀️';
+        themeBtn.title = 'Cambiar a modo claro';
+        themeBtn.addEventListener('click', function() {
+            isLight = !isLight;
+            body.classList.toggle('light-mode', isLight);
+            if (isLight) {
+                themeBtn.textContent = '🌙';
+                themeBtn.title = 'Cambiar a modo oscuro';
+            } else {
+                themeBtn.textContent = '☀️';
+                themeBtn.title = 'Cambiar a modo claro';
+            }
+        });
+    }
 
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.nav-link');

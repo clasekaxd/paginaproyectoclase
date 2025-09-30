@@ -1,4 +1,29 @@
-/* General Body Styles */
+/* Botón flotante modo claro/oscuro */
+#toggle-theme {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+#toggle-theme:hover {
+    background: #0056b3;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+/* Tema oscuro (por defecto) */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -6,6 +31,62 @@ body {
     background-color: #121212;
     color: #e0e0e0;
     line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+body.light-mode header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+body.light-mode nav .nav-link {
+    color: #222;
+}
+
+body.light-mode nav .nav-link:hover, body.light-mode nav .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+body.light-mode section {
+    border-bottom: 1px solid #ccc;
+}
+
+body.light-mode #como-trabajamos li,
+body.light-mode .card,
+body.light-mode #contacto input,
+body.light-mode #contacto textarea {
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+body.light-mode .card h3 {
+    color: #007bff;
+}
+
+body.light-mode #contacto button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+body.light-mode #contacto button:hover {
+    background-color: #0056b3;
+}
+
+body.light-mode #form-message {
+    color: #007bff;
+}
+
+body.light-mode footer {
+    background-color: #fff;
+    color: #222;
+    border-top: 1px solid #ccc;
 }
 
 /* Header and Navigation */
