@@ -1,85 +1,153 @@
 <!DOCTYPE html>
+<!-- La etiqueta data-bs-theme se actualizará con JS -->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProtecSys - Soluciones Integrales</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Mi Página Web Moderna</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Mi CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+<body class="d-flex flex-column min-vh-100">
 
-<body>
-
+    <!-- Header y Navegación -->
     <header>
-
-        <nav>
-            <a href="#inicio" class="nav-link">Inicio</a>
-            <a href="#conocenos" class="nav-link">Conócenos</a>
-            <a href="#como-trabajamos" class="nav-link">Cómo trabajamos</a>
-            <a href="#informacion" class="nav-link">Información</a>
-            <a href="#contacto" class="nav-link">Contacto</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-code"></i> Mi Proyecto</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#acerca">Acerca de</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="theme-switcher">
+                                <label class="form-check-label" for="theme-switcher"><i class="fas fa-moon text-light"></i></label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section id="inicio">
-            <div class="hero">
-                <h1>Protegiendo su Mundo Digital</h1>
-                <p>Soluciones avanzadas en ciberseguridad para un entorno digital seguro.</p>
+    <!-- Contenido Principal -->
+    <main class="flex-shrink-0">
+        <!-- Inicio (Hero Section) -->
+        <section id="inicio" class="text-center d-flex flex-column justify-content-center align-items-center vh-100 text-white bg-dark">
+            <div class="container">
+                <h1 class="display-3 fw-bold">¡Bienvenido a mi nueva página!</h1>
+                <p class="lead col-lg-8 mx-auto">
+                    Un proyecto moderno, responsive y con un diseño atractivo construido paso a paso.
+                </p>
             </div>
         </section>
 
-        <section id="conocenos">
-            <h2>Conócenos</h2>
-            <p>Somos un equipo de expertos en ciberseguridad con más de una década de experiencia en la protección de activos digitales para empresas de todos los tamaños. Nuestra misión es ofrecer tranquilidad en un mundo digital cada vez más complejo y amenazante.</p>
-        </section>
-
-        <section id="como-trabajamos">
-            <h2>Cómo Trabajamos</h2>
-            <ol>
-                <li><strong>Análisis de Vulnerabilidades:</strong> Identificamos los puntos débiles en su infraestructura.</li>
-                <li><strong>Estrategia Personalizada:</strong> Diseñamos un plan de seguridad a la medida de sus necesidades.</li>
-                <li><strong>Implementación y Monitoreo:</strong> Desplegamos las soluciones y vigilamos su entorno 24/7.</li>
-                <li><strong>Respuesta a Incidentes:</strong> Actuamos de forma inmediata ante cualquier amenaza para minimizar el impacto.</li>
-            </ol>
-        </section>
-
-        <section id="informacion">
-            <h2>Información Básica de Ciberseguridad</h2>
-            <div class="info-cards">
-                <div class="card">
-                    <h3>Phishing</h3>
-                    <p>Es una técnica de engaño para robar información personal. Desconfíe de correos sospechosos.</p>
-                </div>
-                <div class="card">
-                    <h3>Malware</h3>
-                    <p>Software malicioso que puede dañar sus sistemas. Use antivirus y mantenga todo actualizado.</p>
-                </div>
-                <div class="card">
-                    <h3>Contraseñas Seguras</h3>
-                    <p>Utilice contraseñas largas, complejas y únicas para cada servicio. Considere un gestor de contraseñas.</p>
+        <!-- Acerca de -->
+        <section id="acerca" class="section">
+            <div class="container">
+                <h2 class="section-title text-center"><i class="fa-solid fa-user"></i> Acerca de Mí</h2>
+                <div class="row align-items-center fade-in-element">
+                    <div class="col-md-6 text-center">
+                        <img src="https://via.placeholder.com/350" class="img-fluid rounded-circle" alt="Foto de perfil de ejemplo">
+                    </div>
+                    <div class="col-md-6">
+                        <p class="lead">Hola, soy un desarrollador web apasionado por crear experiencias de usuario fluidas y atractivas. Este proyecto es una demostración de cómo integrar tecnologías front-end modernas.</p>
+                        <p>Utilizamos HTML5, CSS3 y JavaScript junto con el poderoso framework de Bootstrap para asegurar un diseño completamente responsive y adaptable a cualquier dispositivo.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>¿Listo para mejorar su seguridad? Póngase en contacto con nosotros.</p>
-            <form id="contact-form">
-                <input type="text" id="nombre" name="nombre" placeholder="Su Nombre" required>
-                <input type="email" id="email" name="email" placeholder="Su Email" required>
-                <textarea id="mensaje" name="mensaje" placeholder="Su Mensaje" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-            <p id="form-message"></p>
+        <!-- Galería -->
+        <section id="galeria" class="section">
+            <div class="container">
+                <h2 class="section-title text-center"><i class="fa-solid fa-images"></i> Galería de Proyectos</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4 fade-in-element">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Proyecto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Proyecto Uno</h5>
+                                <p class="card-text">Una breve descripción de este increíble proyecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 fade-in-element">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Proyecto 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Proyecto Dos</h5>
+                                <p class="card-text">Una breve descripción de este increíble proyecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 fade-in-element">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Proyecto 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Proyecto Tres</h5>
+                                <p class="card-text">Una breve descripción de este increíble proyecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="section">
+            <div class="container">
+                <h2 class="section-title text-center"><i class="fa-solid fa-envelope"></i> Contacto</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-    <p>&copy; 2025 ProtecSys. Todos los derechos reservados.</p>
+    <!-- Botón Scroll to Top -->
+    <a href="#" class="scroll-to-top" title="Volver arriba"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container text-center">
+            <span>© 2025 Mi Proyecto. Todos los derechos reservados.</span>
+        </div>
     </footer>
 
-    <!-- Botón modo claro/oscuro flotante -->
-    <button id="toggle-theme" aria-label="Cambiar modo claro/oscuro"></button>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Mi JS personalizado -->
     <script src="js/scripts.js"></script>
 </body>
 </html>
