@@ -17,7 +17,7 @@
 
 [data-bs-theme="dark"] .nav-link.active,
 [data-bs-theme="dark"] .nav-link:hover {
-    color: #ffc107 !important;
+    color: #28a745 !important;
 }
 
 [data-bs-theme="dark"] .section,
@@ -34,7 +34,7 @@
 
 [data-bs-theme="dark"] .card-title,
 [data-bs-theme="dark"] .section-title {
-    color: #ffc107;
+    color: #28a745;
 }
 
 [data-bs-theme="dark"] .form-control,
@@ -46,28 +46,28 @@
 
 [data-bs-theme="dark"] .form-control:focus,
 [data-bs-theme="dark"] .form-select:focus {
-    border-color: #ffc107;
-    box-shadow: 0 0 0 0.25rem rgba(255,193,7,0.25);
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.25rem rgba(40,167,69,0.25);
 }
 
 [data-bs-theme="dark"] .btn-primary {
-    background-color: #ffc107;
-    border-color: #ffc107;
-    color: #23272b;
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #ffffff;
 }
 [data-bs-theme="dark"] .btn-primary:hover {
     filter: brightness(90%);
-    background-color: #e0a800;
-    border-color: #e0a800;
+    background-color: #218838;
+    border-color: #218838;
 }
 
 [data-bs-theme="dark"] .scroll-to-top {
-    background-color: #ffc107;
-    color: #23272b;
+    background-color: #28a745;
+    color: #ffffff;
 }
 [data-bs-theme="dark"] .scroll-to-top:hover {
-    background-color: #e0a800;
-    color: #23272b;
+    background-color: #218838;
+    color: #ffffff;
 }
 /* FUENTES Y VARIABLES DE COLOR */
 :root {
@@ -107,7 +107,22 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .display-3 {
 }
 
 #inicio {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    /* Usar la imagen local con una superposición oscura para bajar el brillo y mejorar legibilidad */
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../imgs/fotofondo.jpeg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+#inicio .display-3, #inicio h1, #inicio .hero h1 {
+    color: #ffffff;
+    text-shadow: 0 6px 20px rgba(0,0,0,0.75);
+}
+
+#inicio .lead, #inicio p {
+    color: rgba(255,255,255,0.92);
+    text-shadow: 0 3px 12px rgba(0,0,0,0.6);
 }
 
 .btn-primary {
@@ -133,7 +148,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .display-3 {
 }
 
 .text-warning {
-    color: #ffc107 !important;
+    color: #28a745 !important;
 }
 
 .card {
